@@ -1,7 +1,12 @@
 import "./App.css";
+import Introduce from "./components/Introduce";
 
 function App() {
-  return <div></div>;
+  return (
+    <div className="App">
+      <Introduce />
+    </div>
+  );
 }
 
 export default App;
