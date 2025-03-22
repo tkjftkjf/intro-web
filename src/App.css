@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 세로 가운데 정렬 */
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
