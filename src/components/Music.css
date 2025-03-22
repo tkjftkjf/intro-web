@@ -8,6 +8,7 @@
 .music {
   padding: 2rem;
   font-family: Pretendard-Regular;
+  padding-bottom: 5rem;
 }
 
 .music-title {
@@ -26,4 +27,26 @@
   border-radius: 12px;
   object-fit: cover;
   transition: transform 0.3s ease;
+}
+
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.genre-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: inherit;
+  cursor: pointer;
+}
+
+.song-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }

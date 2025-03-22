@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./Music.css";
 
 const musics = {
-  힙합: {
-    title: "돈키호테",
-    artist: "피타입",
+  클래식: {
+    title: "Polonaise in A flat major Op. 53",
+    artist: "Chopin",
     albumCover:
-      "https://i.scdn.co/image/ab67616d0000b2731613a5d146d3f3893b961955",
-    color: "#FFE62C",
-    textColor: "#121212",
+      "https://i.scdn.co/image/ab67616d0000b273f438d6b2fa86094d70990ab0",
+    color: "#181212",
+    textColor: "#ffffff",
   },
   재즈: {
     title: "Night in Tunisia",
@@ -17,6 +17,14 @@ const musics = {
       "https://i.scdn.co/image/ab67616d0000b27390ee068042e6372064a1f4c5",
     color: "#19160F",
     textColor: "#ffffff",
+  },
+  재즈힙합: {
+    title: "Luv(sic.) Pt 3",
+    artist: "Nujabes",
+    albumCover:
+      "https://i.scdn.co/image/ab67616d0000b2731a1ba7785a4b91c8aee7a79c",
+    color: "#FAF9E5",
+    textColor: "#121212",
   },
   시티팝: {
     title: "Tokai",
@@ -42,21 +50,13 @@ const musics = {
     color: "#FDDA00",
     textColor: "#121212",
   },
-  재즈힙합: {
-    title: "Luv(sic.) Pt 3",
-    artist: "Nujabes",
+  힙합: {
+    title: "돈키호테",
+    artist: "피타입",
     albumCover:
-      "https://i.scdn.co/image/ab67616d0000b2731a1ba7785a4b91c8aee7a79c",
-    color: "#FAF9E5",
+      "https://i.scdn.co/image/ab67616d0000b2731613a5d146d3f3893b961955",
+    color: "#FFE62C",
     textColor: "#121212",
-  },
-  클래식: {
-    title: "Polonaise in A flat major Op. 53",
-    artist: "Chopin",
-    albumCover:
-      "https://i.scdn.co/image/ab67616d0000b273f438d6b2fa86094d70990ab0",
-    color: "#181212",
-    textColor: "#ffffff",
   },
 };
 
@@ -86,14 +86,14 @@ const Music = () => {
       </div>
 
       <h3 className="song-title">{title}</h3>
-      <p className="song-artist">by {artist}</p>
+      <p className="song-artist">{artist}</p>
 
       <div className="album-cover-container">
         <img
           src={albumCover}
           alt={`${title} 앨범 커버`}
           className="album-cover"
-          style={{ boxShadow: `0 10px 4px ${textColor}` }}
+          style={{ boxShadow: `0 3px 8px ${textColor}` }}
         />
       </div>
     </section>
