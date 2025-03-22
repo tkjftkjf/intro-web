@@ -34,8 +34,8 @@ const SkillGroup = ({ title, skills }) => (
 
 const Programming = () => {
   return (
-    <section className="programming-section">
-      <h2 className="programming-title">개발 스택</h2>
+    <section className="programming">
+      <h1 className="programming-title">개발 스택</h1>
       <SkillGroup title="Web Development" skills={webSkills} />
       <SkillGroup title="Language" skills={langSkills} />
     </section>
