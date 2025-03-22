@@ -21,14 +21,16 @@
 }
 
 .group-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
-  font-weight: 700;
+  font-weight: 900;
+  color: #374151;
 }
 
 .skill-list {
   display: inline-block;
   text-align: left;
+  padding: 0;
 }
 
 .skill-item {
@@ -40,6 +42,39 @@
 }
 
 .skill-name {
-  font-weight: bold;
+  font-weight: 600;
   min-width: 50px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f8f8ff;
+  border-radius: 30px;
+  padding: 1rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  width: 250px;
+  height: 270px;
+
+  transition: all 0.3s ease;
+}
+
+.arrow-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+.arrow-button:hover {
+  transform: scale(1.2);
+}
+
+.invisible {
+  visibility: hidden;
 }

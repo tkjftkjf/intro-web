@@ -33,11 +33,34 @@ const SkillGroup = ({ title, skills }) => (
 );
 
 const Programming = () => {
+  const [currentSkill, setCurrentSkill] = React.useState("webSkills");
+
+  const isWebSkills = currentSkill === "webSkills";
+  const skills = isWebSkills ? webSkills : langSkills;
+  const title = isWebSkills ? "Web Development" : "Language";
+
   return (
     <section className="programming">
       <h1 className="programming-title">개발 스택</h1>
-      <SkillGroup title="Web Development" skills={webSkills} />
-      <SkillGroup title="Language" skills={langSkills} />
+      <div className="card-container">
+        <button
+          className={`arrow-button left ${isWebSkills ? "invisible" : ""}`}
+          onClick={() => setCurrentSkill("webSkills")}
+        >
+          ◀
+        </button>
+
+        <div className="card">
+          <SkillGroup title={title} skills={skills} />
+        </div>
+
+        <button
+          className={`arrow-button right ${!isWebSkills ? "invisible" : ""}`}
+          onClick={() => setCurrentSkill("langSkills")}
+        >
+          ▶
+        </button>
+      </div>
     </section>
   );
 };
